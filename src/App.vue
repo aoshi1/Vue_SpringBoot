@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <!--在这里显示组件-->
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UserMan from "@/components/UserMan";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // eslint-disable-next-line vue/no-unused-components
+    UserMan
   }
 }
 </script>
