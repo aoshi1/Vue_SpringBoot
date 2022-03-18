@@ -1,0 +1,24 @@
+#基本属性
+spring:
+  datasource:
+    #MySQL连接信息，后面一连串的是用于解决时区时间差报错问题
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    #账号
+    username: root
+    #密码
+    password: 642724890
+    #驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#MyBatis的相关配置
+mybatis:
+  #Mapper映射XML文件，建议写在resources目录下
+  mapper-locations: classpath:mappers/*.xml
+  #Mapper接口存放的目录
+  type-aliases-package: com.example.demo.Mapper
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8082
